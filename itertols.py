@@ -31,8 +31,8 @@ def import_libs():
     
     print(inner_code)
 
-""" В группе региональных банков """
 def сlassical_probability_1():
+    """ В группе региональных банков """
     def f():
         def union(A, B):
             return {a + b for a in A for b in B}
