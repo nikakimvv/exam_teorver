@@ -10,6 +10,7 @@ import numpy as np
 import math
 import random
 import inspect
+import pyperclip
 init_printing()
 
 
@@ -28,6 +29,7 @@ def import_libs():
         import random
         init_printing()
     inner_code = inspect.getsource(f)
+    pyperclip.copy(inner_code)
     print(inner_code)
 
 def сlassical_probability_1():
@@ -42,6 +44,7 @@ def сlassical_probability_1():
         P = len(A) / len(omega)
         round(P, 3)
     inner_code = inspect.getsource(f)
+    pyperclip.copy(inner_code)
     print(inner_code)
 
 def сlassical_probability_2():
@@ -52,6 +55,7 @@ def сlassical_probability_2():
         probability = round(len(P) / len(omega), 3)
         print(probability)
     inner_code = inspect.getsource(f)
+    pyperclip.copy(inner_code)
     print(inner_code)
 
 def geometric_probability_1():
@@ -68,6 +72,7 @@ def geometric_probability_1():
         pstat = cnt / N
         round(pstat, 3)
     inner_code = inspect.getsource(f)
+    pyperclip.copy(inner_code)
     print(inner_code)
 
 def independent_events_1():
@@ -83,6 +88,7 @@ def independent_events_1():
         omega1IF = [a for a in omega1 if (a[0] or a[1]) and (a[0] or a[2]) and (a[1] or a[2])]
         round(float(P(omegaIF, omega)), 3), round(float(P(omega1IF, omega1)), 3)
     inner_code = inspect.getsource(f)
+    pyperclip.copy(inner_code)
     print(inner_code)
 
 def formulas_bayes_1():
@@ -108,6 +114,7 @@ def formulas_bayes_1():
         res = (P_A_given_H * P_H) / P_A
         print(round(res, 3)) 
     inner_code = inspect.getsource(f)
+    pyperclip.copy(inner_code)
     print(inner_code)
 
 def formulas_bayes_2():
@@ -123,6 +130,7 @@ def formulas_bayes_2():
         P_H_A = (P_A_H * P_H) / P_A
         round(P_A, 3), round(P_H_A, 3)
     inner_code = inspect.getsource(f)
+    pyperclip.copy(inner_code)
     print(inner_code)
 
 def discrete_random_1():
@@ -146,6 +154,7 @@ def discrete_random_1():
                 U_coeffs[2] ** 2 * Var_Z)
         round(E_U, 1), round(Var_U, 2)
     inner_code = inspect.getsource(f)
+    pyperclip.copy(inner_code)
     print(inner_code)
     
 
@@ -166,6 +175,7 @@ def discrete_random_2():
         Q3max = valid_Q3Max.max() if valid_Q3Max.size > 0 else np.nan
         round(Q1min, 1), round(Q1max, 1), round(Q3min, 1), round(Q3max, 1)
     inner_code = inspect.getsource(f)
+    pyperclip.copy(inner_code)
     print(inner_code)
 
 def discrete_random_3():
@@ -180,6 +190,7 @@ def discrete_random_3():
         Var_Y = X.expect(lambda x: np.abs(x - 10)**2) - E_Y**2
         round(E_X, 1), round(E_Y, 1), round(E_XY, 1), round(Var_X, 2), round(Var_Y, 2)
     inner_code = inspect.getsource(f)
+    pyperclip.copy(inner_code)
     print(inner_code)
 
 def special_discrete_1():
@@ -191,6 +202,7 @@ def special_discrete_1():
         cov_xy_formula = -n * K * (L / N ** 2) * (N - n) / (N - 1)
         print(round(cov_xy_formula, 2))
     inner_code = inspect.getsource(f)
+    pyperclip.copy(inner_code)
     print(inner_code)
 
 def special_discrete_2():
@@ -210,6 +222,7 @@ def special_discrete_2():
         E_XY = float(cov_XY + E_X * E_Y)
         round(E_X, 3), round(sigma_X, 3), round(rho_XY, 3), round(E_XY, 1)
     inner_code = inspect.getsource(f)
+    pyperclip.copy(inner_code)
     print(inner_code)
 
 def special_discrete_3():
@@ -223,6 +236,7 @@ def special_discrete_3():
         var = variance(S)
         round(var ** 0.5, 1), round(asymm.evalf(), 3)
     inner_code = inspect.getsource(f)
+    pyperclip.copy(inner_code)
     print(inner_code)
 
 def special_discrete_4():
@@ -238,6 +252,7 @@ def special_discrete_4():
         excess = 1 / total
         round(prob_X7, 3), most_val, round(std, 3), round(asymm, 3), round(excess, 3)
     inner_code = inspect.getsource(f)
+    pyperclip.copy(inner_code)
     print(inner_code)
 
 def continuous_random_1():
@@ -266,6 +281,7 @@ def continuous_random_1():
         Y_08 = float(((1 + 6*X ** 0.5 + 3*X ** 0.7 + 8*X ** 0.9) ** 1.1).subs(X, X_08).evalf())
         print(f'{Y_08:.4f}')
     inner_code = inspect.getsource(f)
+    pyperclip.copy(inner_code)
     print(inner_code)
 
 def continuous_random_1():
@@ -294,6 +310,7 @@ def continuous_random_1():
         Y_08 = float(((1 + 6*X ** 0.5 + 3*X ** 0.7 + 8*X ** 0.9) ** 1.1).subs(X, X_08).evalf())
         print(f'{Y_08:.4f}')
     inner_code = inspect.getsource(f)
+    pyperclip.copy(inner_code)
     print(inner_code)
 
 def continuous_random_2():
@@ -326,6 +343,7 @@ def continuous_random_2():
         Q1 = X.ppf(0.8)
         print(f'{Q1:.3f}')
     inner_code = inspect.getsource(f)
+    pyperclip.copy(inner_code)
     print(inner_code)
 
 def independent_dsv_1():
@@ -338,6 +356,7 @@ def independent_dsv_1():
         VarE_X = X.var()
         round(E_X, 2), round(VarE_X / n, 3)
     inner_code = inspect.getsource(f)
+    pyperclip.copy(inner_code)
     print(inner_code)
 
 def independent_dsv_2():
@@ -356,6 +375,7 @@ def independent_dsv_2():
         VarS_160 = S0 ** 2 * ((X1.mean()) ** n - X.mean() ** (2 * n))
         print(round(sqrt(VarS_160), 2))
     inner_code = inspect.getsource(f)
+    pyperclip.copy(inner_code)
     print(inner_code)
 
 def dependent_dsv_1():
@@ -373,6 +393,7 @@ def dependent_dsv_1():
         Var_S = n * VarE_X + n * (n - 1) * Cov_Xi_Xj
         print(round(Var_S, 2))
     inner_code = inspect.getsource(f)
+    pyperclip.copy(inner_code)
     print(inner_code)
 
 def dependent_dsv_2():
@@ -384,6 +405,7 @@ def dependent_dsv_2():
         k = 20
         round(k * X.mean(), 2), round((k * (n + 1) / 12) * (n - k), 3)
     inner_code = inspect.getsource(f)
+    pyperclip.copy(inner_code)
     print(inner_code)
 
 def dependent_dsv_3():
@@ -406,6 +428,7 @@ def dependent_dsv_3():
         Var_S = (1**2) * Var_1 + (4**2) * Var_4 + (6**2) * Var_6 + 2 * (1 * 4 * cov_1_4 + 1 * 6 * cov_1_6 + 4 * 6 * cov_4_6)
         round(E_S, 3), round(Var_S, 3)
     inner_code = inspect.getsource(f)
+    pyperclip.copy(inner_code)
     print(inner_code)
 
 def discrete_vectors_1():
@@ -435,6 +458,7 @@ def discrete_vectors_1():
         rho_XY = cov_XY / (np.sqrt(var_X) * np.sqrt(var_Y))
         print(f"5. ρ(X, Y) = {rho_XY:.3f}")
     inner_code = inspect.getsource(f)
+    pyperclip.copy(inner_code)
     print(inner_code)
 
 def discrete_vectors_2():
@@ -461,6 +485,7 @@ def discrete_vectors_2():
         rho_XY = cov_XY / np.sqrt(var_X * var_Y)
         print(f"5. ρ(X, Y) = {rho_XY:.3f}")
     inner_code = inspect.getsource(f)
+    pyperclip.copy(inner_code)
     print(inner_code)
 
 def discrete_vectors_3():
@@ -493,6 +518,7 @@ def discrete_vectors_3():
         rho_XY = cov_XY / (sigma_X * sigma_Y)
         print(f"5. ρ(X, Y) = {rho_XY:.3f}")
     inner_code = inspect.getsource(f)
+    pyperclip.copy(inner_code)
     print(inner_code)
 
 def discrete_vectors_4():
@@ -526,6 +552,7 @@ def discrete_vectors_4():
         rho_Xsq_Ysq = cov_Xsq_Ysq / (sigma_X_sq * sigma_Y_sq)
         print(f"5. ρ(X², Y²) = {rho_Xsq_Ysq:.3f}")
     inner_code = inspect.getsource(f)
+    pyperclip.copy(inner_code)
     print(inner_code)
 
 def discrete_vectors_5():
@@ -554,6 +581,7 @@ def discrete_vectors_5():
         cov_X_sq_Y = E_X_sq_Y - E_X_sq * E_Y
         print(f"5. Cov(X², Y) = {cov_X_sq_Y:.3f}")
     inner_code = inspect.getsource(f)
+    pyperclip.copy(inner_code)
     print(inner_code)
 
 def discrete_vectors_6():
@@ -586,6 +614,7 @@ def discrete_vectors_6():
         rho_X_sq_Y = cov_X_sq_Y / (sigma_X_sq * sigma_Y)
         print(f"5. ρ(X², Y) = {rho_X_sq_Y:.3f}")
     inner_code = inspect.getsource(f)
+    pyperclip.copy(inner_code)
     print(inner_code)
 
 def independent_discrete_1():
@@ -614,6 +643,7 @@ def independent_discrete_1():
         var_V = E_V_sq - E_V**2
         print(f"4. Var(V) = {var_V:.3f}")
     inner_code = inspect.getsource(f)
+    pyperclip.copy(inner_code)
     print(inner_code)
 
 def normal_vectors_1():
@@ -633,6 +663,7 @@ def normal_vectors_1():
         print(f"5) Cov(X, Y) = {Cov_XY:.4f}")
         print(f"6) ρ(X, Y) = {rho:.4f}")
     inner_code = inspect.getsource(f)
+    pyperclip.copy(inner_code)
     print(inner_code)
 
 def normal_vectors_2():
@@ -652,6 +683,7 @@ def normal_vectors_2():
         P_C = Y.cdf(1) - mvn.cdf([11, 1])
         round(P_A + P_B + P_C, 4)
     inner_code = inspect.getsource(f)
+    pyperclip.copy(inner_code)
     print(inner_code)
 
 def normal_vectors_3():
@@ -668,6 +700,7 @@ def normal_vectors_3():
         Y = norm(loc=mu_y, scale=sigma_y)
         round(X.cdf(4) + Y.cdf(3) - 2 * mvn.cdf([4, 3]), 5)
     inner_code = inspect.getsource(f)
+    pyperclip.copy(inner_code)
     print(inner_code)
 
 def conditional_sv_1():
@@ -679,6 +712,7 @@ def conditional_sv_1():
         print(f"1) {E_S:.2f} руб.")
         print(f"2) {std_S:.2f} руб.")
     inner_code = inspect.getsource(f)
+    pyperclip.copy(inner_code)
     print(inner_code)
 
 def conditional_sv_2():
@@ -693,6 +727,7 @@ def conditional_sv_2():
         print(f"1) {E_D_Y_given_X:.4f}")
         print(f"2) {D_E_Y_given_X:.4f}")
     inner_code = inspect.getsource(f)
+    pyperclip.copy(inner_code)
     print(inner_code)
 
 def conditional_sv_3():
@@ -704,6 +739,7 @@ def conditional_sv_3():
         print(f"1) {E_Y:.3f}")
         print(f"2) {E_conditional_variance:.4f}")
     inner_code = inspect.getsource(f)
+    pyperclip.copy(inner_code)
     print(inner_code)
 
 def conditional_sv_4():
@@ -716,6 +752,7 @@ def conditional_sv_4():
         print(f"1) {E_Y:.3f}")
         print(f"2) {D_E_Y_given_X:.4f}")
     inner_code = inspect.getsource(f)
+    pyperclip.copy(inner_code)
     print(inner_code)
 
 def conditional_sv_5():
@@ -728,6 +765,7 @@ def conditional_sv_5():
         print(f"1) {E_XY:.3f}")
         print(f"2) {E_XY_cov:.4f}")
     inner_code = inspect.getsource(f)
+    pyperclip.copy(inner_code)
     print(inner_code)
 
 def conditional_sv_6():
@@ -747,6 +785,7 @@ def conditional_sv_6():
         print(f"1) {E_S:.4f}")
         print(f"2) {sigma_S:.4f}")
     inner_code = inspect.getsource(f)
+    pyperclip.copy(inner_code)
     print(inner_code)
 
 def conditional_vectors_1():
@@ -770,6 +809,7 @@ def conditional_vectors_1():
         print(f"4) {E4:.4f}")
         print(f"5) {E5:.2f}")
     inner_code = inspect.getsource(f)
+    pyperclip.copy(inner_code)
     print(inner_code)
 
 def portfolio_analysis_1():
@@ -785,6 +825,7 @@ def portfolio_analysis_1():
         print(f"1) Доля A = {w_A:.3f}; Доля B = {w_B:.3f}")
         print(f"2) Ожидаемая доходность = {E_portfolio:.4f}%; Стандартное отклонение = {sigma_portfolio:.5f}%")
     inner_code = inspect.getsource(f)
+    pyperclip.copy(inner_code)
     print(inner_code)
 
 def portfolio_analysis_2():
@@ -799,6 +840,7 @@ def portfolio_analysis_2():
         otv = sigma_portfolio * 100
         print(f"1) {otv:.6f}")
     inner_code = inspect.getsource(f)
+    pyperclip.copy(inner_code)
     print(inner_code)
 
 def portfolio_analysis_3():
@@ -811,6 +853,7 @@ def portfolio_analysis_3():
         otv= portfolio_return * 100
         print(f"1) {otv:.3f}")
     inner_code = inspect.getsource(f)
+    pyperclip.copy(inner_code)
     print(inner_code)
 
 def monte_carlo_1():
@@ -836,6 +879,7 @@ def monte_carlo_1():
                 counter_A += distance.euclidean(point1, point2) < 5.2
         print(counter_A / counter_B)
     inner_code = inspect.getsource(f)
+    pyperclip.copy(inner_code)
     print(inner_code)
 
 def monte_carlo_2():
@@ -856,6 +900,7 @@ def monte_carlo_2():
         pstatA_B = cnt_A / cnt_B
         print(round(pstat_A, 2), round(pstatA_B, 2))
     inner_code = inspect.getsource(f)
+    pyperclip.copy(inner_code)
     print(inner_code)
 
 def monte_carlo_3():
@@ -887,6 +932,7 @@ def monte_carlo_3():
         print(f"P(R|T) ≈ {p_r_given_t:.2f}")
         print(f"P(S|T) ≈ {p_s_given_t:.2f}")
     inner_code = inspect.getsource(f)
+    pyperclip.copy(inner_code)
     print(inner_code)
 
 def get_methods():
@@ -911,4 +957,5 @@ def get_methods():
         'monte_carlo_n() –> Задание №1'
         'n - это номер шаблона, n=[1, 6]'
     inner_code = inspect.getsource(f)
+    pyperclip.copy(inner_code)
     print(inner_code)
