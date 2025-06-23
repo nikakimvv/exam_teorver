@@ -32,6 +32,7 @@ def import_libs():
     pyperclip.copy(inner_code)
     print(inner_code)
 
+""" В группе региональных банков """
 def сlassical_probability_1():
     def f():
         def union(A, B):
@@ -47,6 +48,7 @@ def сlassical_probability_1():
     pyperclip.copy(inner_code)
     print(inner_code)
 
+""" Независимо друг от друга """
 def сlassical_probability_2():
     def f():
         w = [str(i) for i in range(1, 12)]
@@ -58,6 +60,7 @@ def сlassical_probability_2():
     pyperclip.copy(inner_code)
     print(inner_code)
 
+""" Двое договорились о """
 def geometric_probability_1():
     def f():
         U1 = uniform()
@@ -75,6 +78,7 @@ def geometric_probability_1():
     pyperclip.copy(inner_code)
     print(inner_code)
 
+""" События A, B и C независимы """
 def independent_events_1():
     def f():
         def P(event, space):
@@ -91,6 +95,7 @@ def independent_events_1():
     pyperclip.copy(inner_code)
     print(inner_code)
 
+""" Имеется две корзины (без n и p) """
 def formulas_bayes_1():
     def f():
         n1 = 28 # общее кол-во шаров в 1-ой корзине
@@ -117,6 +122,7 @@ def formulas_bayes_1():
     pyperclip.copy(inner_code)
     print(inner_code)
 
+""" Имеется две корзины (n и p) """
 def formulas_bayes_2():
     def f():
         P_X1 = {k: binom.pmf(k, 7, 0.3) for k in range(8)}
@@ -133,6 +139,7 @@ def formulas_bayes_2():
     pyperclip.copy(inner_code)
     print(inner_code)
 
+""" События А, B и С имеют вероятности """
 def discrete_random_1():
     def f():
         P_A = 0.1
@@ -157,7 +164,7 @@ def discrete_random_1():
     pyperclip.copy(inner_code)
     print(inner_code)
     
-
+""" Случайная велечина X """
 def discrete_random_2():
     def f():
         X_values = np.arange(1, 41)
@@ -178,6 +185,7 @@ def discrete_random_2():
     pyperclip.copy(inner_code)
     print(inner_code)
 
+""" Распределение случайной велечины X """
 def discrete_random_3():
     def f():
         xk = np.array([2, 6, 9, 13, 15])
@@ -193,6 +201,7 @@ def discrete_random_3():
     pyperclip.copy(inner_code)
     print(inner_code)
 
+""" Корзина содержит """
 def special_discrete_1():
     def f():
         N = 63  # общее количество шаров
@@ -205,6 +214,7 @@ def special_discrete_1():
     pyperclip.copy(inner_code)
     print(inner_code)
 
+""" Монеты в количестве """
 def special_discrete_2():
     def f():
         n_coins = 15
@@ -225,6 +235,7 @@ def special_discrete_2():
     pyperclip.copy(inner_code)
     print(inner_code)
 
+""" Селекционер отобрал """
 def special_discrete_3():
     def f():
         n1, p1 = 290, 0.91
@@ -239,6 +250,7 @@ def special_discrete_3():
     pyperclip.copy(inner_code)
     print(inner_code)
 
+""" Независимые пуассоновские """
 def special_discrete_4():
     def f():
         sigma1 = 1.5
@@ -255,6 +267,7 @@ def special_discrete_4():
     pyperclip.copy(inner_code)
     print(inner_code)
 
+""" Случайная велечина X равномерно распределена """
 def continuous_random_1():
     def f():
         a, b = (5, 7)
@@ -284,35 +297,7 @@ def continuous_random_1():
     pyperclip.copy(inner_code)
     print(inner_code)
 
-def continuous_random_1():
-    def f():
-        a, b = (5, 7)
-        def EY(X):
-            if (a <= X <= b):
-                return (1 + 6*X ** 0.5 + 3*X ** 0.7 + 8*X ** 0.9) ** 1.1 * (1/(b - a))
-            return 0
-        E_Y = integrate.quad(EY, a, b)[0]
-        print(f'{E_Y:.1f}')
-        def Var(X):
-            if (a <= X <= b):
-                return (((1 + 6*X ** 0.5 + 3*X ** 0.7 + 8*X ** 0.9) ** 1.1) ** 2 * (1/(b - a)))
-            return 0
-        std_Y = np.sqrt(integrate.quad(Var, a, b)[0] - E_Y ** 2)
-        print(f'{std_Y:.2f}')
-        def As(X):
-            if (a <= X <= b):
-                return (((1 + 6*X ** 0.5 + 3*X ** 0.7 + 8*X ** 0.9) ** 1.1 - E_Y) ** 3 * (1/(b - a)))
-            return 0
-        asymm_Y = (1 / std_Y ** 3) * integrate.quad(As, a, b)[0]
-        print(f'{asymm_Y:.4f}')
-        X = symbols('X')
-        X_08 = a + 0.8*(b - a)
-        Y_08 = float(((1 + 6*X ** 0.5 + 3*X ** 0.7 + 8*X ** 0.9) ** 1.1).subs(X, X_08).evalf())
-        print(f'{Y_08:.4f}')
-    inner_code = inspect.getsource(f)
-    pyperclip.copy(inner_code)
-    print(inner_code)
-
+""" Абсолютно непрерывная случная велечина X """
 def continuous_random_2():
     def f():
         def func(x):
@@ -346,6 +331,7 @@ def continuous_random_2():
     pyperclip.copy(inner_code)
     print(inner_code)
 
+""" Доход по типовому контракту """
 def independent_dsv_1():
     def f():
         n = 9
@@ -359,6 +345,7 @@ def independent_dsv_1():
     pyperclip.copy(inner_code)
     print(inner_code)
 
+""" Вероятность повышения цены акции """
 def independent_dsv_2():
     def f():
         values = [1.05, 1.003, 0.99]
@@ -378,6 +365,7 @@ def independent_dsv_2():
     pyperclip.copy(inner_code)
     print(inner_code)
 
+""" Случайные велечины X1, ..., X11 """
 def dependent_dsv_1():
     def f():
         vals = [0, 1, 5]
@@ -396,6 +384,7 @@ def dependent_dsv_1():
     pyperclip.copy(inner_code)
     print(inner_code)
 
+""" Корзина содержит 35 пронумерованных шаров """
 def dependent_dsv_2():
     def f():
         xk = np.arange(1, 36)
@@ -408,6 +397,7 @@ def dependent_dsv_2():
     pyperclip.copy(inner_code)
     print(inner_code)
 
+""" Корзина содержит 47 шаров, на которых изображены цифры: """
 def dependent_dsv_3():
     def f():
         total_balls = 47
@@ -431,6 +421,7 @@ def dependent_dsv_3():
     pyperclip.copy(inner_code)
     print(inner_code)
 
+""" Дано совместное рапределение дискретных случайных велечин X и Y """
 def discrete_vectors_1():
     def f():
         X_values = np.array([3, 5, 8])
@@ -461,6 +452,7 @@ def discrete_vectors_1():
     pyperclip.copy(inner_code)
     print(inner_code)
 
+""" Распределение случайного вектора имеет вид """
 def discrete_vectors_2():
     def f():
         X_values = np.array([1, 3, 5])
@@ -488,6 +480,7 @@ def discrete_vectors_2():
     pyperclip.copy(inner_code)
     print(inner_code)
 
+""" Распределение случайного вектора имеет вид """
 def discrete_vectors_3():
     def f():
         X_values = np.array([4, 5, 7])
@@ -521,6 +514,7 @@ def discrete_vectors_3():
     pyperclip.copy(inner_code)
     print(inner_code)
 
+""" Дано совместное рапределение дискретных случайных велечин X и Y """
 def discrete_vectors_4():
     def f():
         X_values = np.array([2, 5, 6])
@@ -555,6 +549,7 @@ def discrete_vectors_4():
     pyperclip.copy(inner_code)
     print(inner_code)
 
+""" Распределение случайного вектора имеет вид """
 def discrete_vectors_5():
     def f():
         X_values = np.array([1, 4, 5])
@@ -584,6 +579,7 @@ def discrete_vectors_5():
     pyperclip.copy(inner_code)
     print(inner_code)
 
+""" Распределение случайного вектора имеет вид """
 def discrete_vectors_6():
     def f():
         X_values = np.array([3, 5, 7])
@@ -617,6 +613,7 @@ def discrete_vectors_6():
     pyperclip.copy(inner_code)
     print(inner_code)
 
+""" Внутри квадрата площади 100 расположены треугольник и круг """
 def independent_discrete_1():
     def f():
         square_area = 100
@@ -646,6 +643,7 @@ def independent_discrete_1():
     pyperclip.copy(inner_code)
     print(inner_code)
 
+""" Случайный вектор (X, Y) имеет плотность распределения """
 def normal_vectors_1():
     def f():
         Sigma_inv = np.array([[20, 24], [24, 45]])
@@ -666,6 +664,7 @@ def normal_vectors_1():
     pyperclip.copy(inner_code)
     print(inner_code)
 
+""" Для нормального случайного вектора: P((X-8)(X-11)(Y-1)<0) """
 def normal_vectors_2():
     def f():
         mu_x = -2
@@ -686,6 +685,7 @@ def normal_vectors_2():
     pyperclip.copy(inner_code)
     print(inner_code)
 
+""" Для нормального случайного вектора: P((X-4)(Y-3)<0) """
 def normal_vectors_3():
     def f():
         mu_x = -7
@@ -703,6 +703,7 @@ def normal_vectors_3():
     pyperclip.copy(inner_code)
     print(inner_code)
 
+""" Максимальный ущерб от страхового случая составляет """
 def conditional_sv_1():
     def f():
         max_loss = 3.4  # Максимальный ущерб
@@ -715,6 +716,7 @@ def conditional_sv_1():
     pyperclip.copy(inner_code)
     print(inner_code)
 
+""" В первом броске учавствуют 115 несимметричных монет. Отв: 'без орлов' """
 def conditional_sv_2():
     def f():
         n = 115
@@ -730,6 +732,7 @@ def conditional_sv_2():
     pyperclip.copy(inner_code)
     print(inner_code)
 
+""" В первом броске учавствуют 115 несимметричных монет. Отв: 'орлов' """
 def conditional_sv_3():
     def f():
         n = 56
@@ -742,6 +745,7 @@ def conditional_sv_3():
     pyperclip.copy(inner_code)
     print(inner_code)
 
+""" В первом броске учавствуют 186 несимметричных монет. Отв: мат. ожид. """
 def conditional_sv_4():
     def f():
         n = 186
@@ -755,6 +759,7 @@ def conditional_sv_4():
     pyperclip.copy(inner_code)
     print(inner_code)
 
+""" Для случайной цены Y известны вероятности: """
 def conditional_sv_5():
     def f():
         P_Y = {9: 0.4, 18: 0.6}
@@ -768,6 +773,7 @@ def conditional_sv_5():
     pyperclip.copy(inner_code)
     print(inner_code)
 
+""" Игральная кость и 25 монет подбрасываются до тех пор, """
 def conditional_sv_6():
     def f():
         n_coins = 25
@@ -788,6 +794,7 @@ def conditional_sv_6():
     pyperclip.copy(inner_code)
     print(inner_code)
 
+""" Дано совместное рапределение дискретных случайных велечин X и Y. Отв: E5 = E(E(X|Y)) """
 def conditional_vectors_1():
     def f():
         joint_prob = {
@@ -812,6 +819,7 @@ def conditional_vectors_1():
     pyperclip.copy(inner_code)
     print(inner_code)
 
+""" Математическое ожидание доходности акций компаний А и B составляет"""
 def portfolio_analysis_1():
     def f():
         E_A, E_B = 0.01, 0.02  # Мат. ожидания доходностей
@@ -828,6 +836,7 @@ def portfolio_analysis_1():
     pyperclip.copy(inner_code)
     print(inner_code)
 
+""" Инвестор сформировал портфель из акций команий А и B, """
 def portfolio_analysis_2():
     def f():
         w_A = 10 / (10 + 1)  # Доля акций A (10 частей из 11)
@@ -843,6 +852,7 @@ def portfolio_analysis_2():
     pyperclip.copy(inner_code)
     print(inner_code)
 
+""" Ожидаемая доходность и стандартное отклонение доходности за период """
 def portfolio_analysis_3():
     def f():
         returns = np.array([0.02, 0.03, 0.04])  # Ожидаемые доходности A, B, C (%)
@@ -856,6 +866,7 @@ def portfolio_analysis_3():
     pyperclip.copy(inner_code)
     print(inner_code)
 
+""" В области ограниченной эллипсом """
 def monte_carlo_1():
     def f():
         def point():
@@ -882,6 +893,7 @@ def monte_carlo_1():
     pyperclip.copy(inner_code)
     print(inner_code)
 
+""" В прямоугольной области """
 def monte_carlo_2():
     def f():
         def length(point1, point2):
@@ -903,6 +915,7 @@ def monte_carlo_2():
     pyperclip.copy(inner_code)
     print(inner_code)
 
+""" В кубе объема 3 случайным образом """
 def monte_carlo_3():
     def f():
         n_acute = 0
@@ -943,18 +956,18 @@ def get_methods():
         'geometric_probability_n() –> Задание №1'
         'independent_events_n() –> Задание №1'
         'formulas_bayes_n() –> Задание №1'
+        'monte_carlo_n() –> Задание №1'
         'discrete_random_n() –> Задание №2'
-        'special_discrete_n() –> Задание №3'
-        'continuous_random_n() –> Задание №4'
         'independent_dsv_n() –> Задание №2'
-        'dependent_dsv_n() –> Задание №3'
-        'discrete_vectors_n() –> Задание №5'
         'independent_discrete_n() –> Задание №2'
+        'special_discrete_n() –> Задание №3'
+        'dependent_dsv_n() –> Задание №3'
+        'portfolio_analysis_n() –> Задание №3'
+        'continuous_random_n() –> Задание №4'
         'normal_vectors_n() –> Задание №4'
+        'discrete_vectors_n() –> Задание №5'
         'conditional_sv_n() –> Задание №6'
         'conditional_vectors_n() –> Задание №6'
-        'portfolio_analysis_n() –> Задание №3'
-        'monte_carlo_n() –> Задание №1'
         'n - это номер шаблона, n=[1, 6]'
     inner_code = inspect.getsource(f)
     pyperclip.copy(inner_code)
