@@ -47,8 +47,8 @@ def сlassical_probability_1():
     
     print(inner_code)
 
-""" Независимо друг от друга """
 def сlassical_probability_2():
+    """ Независимо друг от друга """
     def f():
         w = [str(i) for i in range(1, 12)]
         omega = list(product(w, repeat=4))
@@ -59,8 +59,8 @@ def сlassical_probability_2():
     
     print(inner_code)
 
-""" Двое договорились о """
 def geometric_probability_1():
+    """ Двое договорились о """
     def f():
         U1 = uniform()
         U2 = uniform()
@@ -77,8 +77,8 @@ def geometric_probability_1():
     
     print(inner_code)
 
-""" События A, B и C независимы """
 def independent_events_1():
+    """ События A, B и C независимы """
     def f():
         def P(event, space):
             return Fraction( len(event) , len(space) )
@@ -94,8 +94,8 @@ def independent_events_1():
     
     print(inner_code)
 
-""" Имеется две корзины (без n и p) """
 def formulas_bayes_1():
+    """ Имеется две корзины (без n и p) """
     def f():
         n1 = 28 # общее кол-во шаров в 1-ой корзине
         w1 = 13 # белые 1-ая корзина
@@ -121,8 +121,8 @@ def formulas_bayes_1():
     
     print(inner_code)
 
-""" Имеется две корзины (n и p) """
 def formulas_bayes_2():
+    """ Имеется две корзины (n и p) """
     def f():
         P_X1 = {k: binom.pmf(k, 7, 0.3) for k in range(8)}
         P_X2 = {k: binom.pmf(k, 5, 0.5) for k in range(6)}
@@ -138,8 +138,8 @@ def formulas_bayes_2():
     
     print(inner_code)
 
-""" События А, B и С имеют вероятности """
 def discrete_random_1():
+    """ События А, B и С имеют вероятности """
     def f():
         P_A = 0.1
         P_B = 0.4
@@ -163,8 +163,8 @@ def discrete_random_1():
     
     print(inner_code)
     
-""" Случайная велечина X """
 def discrete_random_2():
+    """ Случайная велечина X """
     def f():
         X_values = np.arange(1, 41)
         Y_values = np.abs(X_values - 17.5)
@@ -184,8 +184,8 @@ def discrete_random_2():
     
     print(inner_code)
 
-""" Распределение случайной велечины X """
 def discrete_random_3():
+    """ Распределение случайной велечины X """
     def f():
         xk = np.array([2, 6, 9, 13, 15])
         pxk = np.array([0.1, 0.2, 0.2, 0.3, 0.2])
@@ -200,8 +200,8 @@ def discrete_random_3():
     
     print(inner_code)
 
-""" Корзина содержит """
 def special_discrete_1():
+    """ Корзина содержит """
     def f():
         N = 63  # общее количество шаров
         K = 18  # количество красных шаров
@@ -213,8 +213,8 @@ def special_discrete_1():
     
     print(inner_code)
 
-""" Монеты в количестве """
 def special_discrete_2():
+    """ Монеты в количестве """
     def f():
         n_coins = 15
         k_success = 7
@@ -234,8 +234,8 @@ def special_discrete_2():
     
     print(inner_code)
 
-""" Селекционер отобрал """
 def special_discrete_3():
+    """ Селекционер отобрал """
     def f():
         n1, p1 = 290, 0.91
         n2, p2 = 160, 0.92
@@ -249,8 +249,8 @@ def special_discrete_3():
     
     print(inner_code)
 
-""" Независимые пуассоновские """
 def special_discrete_4():
+    """ Независимые пуассоновские """
     def f():
         sigma1 = 1.5
         sigma2 = 1.3
@@ -266,8 +266,8 @@ def special_discrete_4():
     
     print(inner_code)
 
-""" Случайная велечина X равномерно распределена """
 def continuous_random_1():
+    """ Случайная велечина X равномерно распределена """
     def f():
         a, b = (5, 7)
         def EY(X):
@@ -296,8 +296,8 @@ def continuous_random_1():
     
     print(inner_code)
 
-""" Абсолютно непрерывная случная велечина X """
 def continuous_random_2():
+    """ Абсолютно непрерывная случная велечина X """
     def f():
         def func(x):
             return (1 + 2*x ** 0.5 + 3*x ** 0.7 + 7*x ** 0.9) ** 1.5
@@ -330,8 +330,8 @@ def continuous_random_2():
     
     print(inner_code)
 
-""" Доход по типовому контракту """
 def independent_dsv_1():
+    """ Доход по типовому контракту """
     def f():
         n = 9
         xk = np.array([5, 8, 9, 10, 11])
@@ -344,8 +344,8 @@ def independent_dsv_1():
     
     print(inner_code)
 
-""" Вероятность повышения цены акции """
 def independent_dsv_2():
+    """ Вероятность повышения цены акции """
     def f():
         values = [1.05, 1.003, 0.99]
         probs = [0.1, 0.4, 0.5]
@@ -364,8 +364,8 @@ def independent_dsv_2():
     
     print(inner_code)
 
-""" Случайные велечины X1, ..., X11 """
 def dependent_dsv_1():
+    """ Случайные велечины X1, ..., X11 """
     def f():
         vals = [0, 1, 5]
         probs = [0.4, 0.3, 0.3]
@@ -383,8 +383,8 @@ def dependent_dsv_1():
     
     print(inner_code)
 
-""" Корзина содержит 35 пронумерованных шаров """
 def dependent_dsv_2():
+    """ Корзина содержит 35 пронумерованных шаров """
     def f():
         xk = np.arange(1, 36)
         pxk = [1/35] * 35
@@ -396,8 +396,8 @@ def dependent_dsv_2():
     
     print(inner_code)
 
-""" Корзина содержит 47 шаров, на которых изображены цифры: """
 def dependent_dsv_3():
+    """ Корзина содержит 47 шаров, на которых изображены цифры: """
     def f():
         total_balls = 47
         balls_1 = 19
@@ -420,8 +420,8 @@ def dependent_dsv_3():
     
     print(inner_code)
 
-""" Дано совместное рапределение дискретных случайных велечин X и Y """
 def discrete_vectors_1():
+    """ Дано совместное рапределение дискретных случайных велечин X и Y """
     def f():
         X_values = np.array([3, 5, 8])
         Y_values = np.array([9, 10])
@@ -451,8 +451,8 @@ def discrete_vectors_1():
     
     print(inner_code)
 
-""" Распределение случайного вектора имеет вид """
 def discrete_vectors_2():
+    """ Распределение случайного вектора имеет вид """
     def f():
         X_values = np.array([1, 3, 5])
         Y_values = np.array([8, 9])
@@ -479,8 +479,8 @@ def discrete_vectors_2():
     
     print(inner_code)
 
-""" Распределение случайного вектора имеет вид """
 def discrete_vectors_3():
+    """ Распределение случайного вектора имеет вид """
     def f():
         X_values = np.array([4, 5, 7])
         Y_values = np.array([8, 11])
@@ -513,8 +513,8 @@ def discrete_vectors_3():
     
     print(inner_code)
 
-""" Дано совместное рапределение дискретных случайных велечин X и Y """
 def discrete_vectors_4():
+    """ Дано совместное рапределение дискретных случайных велечин X и Y """
     def f():
         X_values = np.array([2, 5, 6])
         Y_values = np.array([10, 11])
@@ -548,8 +548,8 @@ def discrete_vectors_4():
     
     print(inner_code)
 
-""" Распределение случайного вектора имеет вид """
 def discrete_vectors_5():
+    """ Распределение случайного вектора имеет вид """
     def f():
         X_values = np.array([1, 4, 5])
         Y_values = np.array([7, 9])
@@ -578,8 +578,8 @@ def discrete_vectors_5():
     
     print(inner_code)
 
-""" Распределение случайного вектора имеет вид """
 def discrete_vectors_6():
+    """ Распределение случайного вектора имеет вид """
     def f():
         X_values = np.array([3, 5, 7])
         Y_values = np.array([10, 11])
@@ -612,8 +612,8 @@ def discrete_vectors_6():
     
     print(inner_code)
 
-""" Внутри квадрата площади 100 расположены треугольник и круг """
 def independent_discrete_1():
+    """ Внутри квадрата площади 100 расположены треугольник и круг """
     def f():
         square_area = 100
         triangle_area = 44
@@ -642,8 +642,8 @@ def independent_discrete_1():
     
     print(inner_code)
 
-""" Случайный вектор (X, Y) имеет плотность распределения """
 def normal_vectors_1():
+    """ Случайный вектор (X, Y) имеет плотность распределения """
     def f():
         Sigma_inv = np.array([[20, 24], [24, 45]])
         Sigma = np.linalg.inv(Sigma_inv)
@@ -663,8 +663,8 @@ def normal_vectors_1():
     
     print(inner_code)
 
-""" Для нормального случайного вектора: P((X-8)(X-11)(Y-1)<0) """
 def normal_vectors_2():
+    """ Для нормального случайного вектора: P((X-8)(X-11)(Y-1)<0) """
     def f():
         mu_x = -2
         mu_y = 4
@@ -684,8 +684,8 @@ def normal_vectors_2():
     
     print(inner_code)
 
-""" Для нормального случайного вектора: P((X-4)(Y-3)<0) """
 def normal_vectors_3():
+    """ Для нормального случайного вектора: P((X-4)(Y-3)<0) """
     def f():
         mu_x = -7
         mu_y = 17
@@ -702,8 +702,8 @@ def normal_vectors_3():
     
     print(inner_code)
 
-""" Максимальный ущерб от страхового случая составляет """
 def conditional_sv_1():
+    """ Максимальный ущерб от страхового случая составляет """
     def f():
         max_loss = 3.4  # Максимальный ущерб
         avg_cases = 16 / 5  # Среднее число случаев в год (16 за 5 лет)
@@ -715,8 +715,8 @@ def conditional_sv_1():
     
     print(inner_code)
 
-""" В первом броске учавствуют 115 несимметричных монет. Отв: 'без орлов' """
 def conditional_sv_2():
+    """ В первом броске учавствуют 115 несимметричных монет. Отв: 'без орлов' """
     def f():
         n = 115
         p = 0.4
@@ -731,8 +731,8 @@ def conditional_sv_2():
     
     print(inner_code)
 
-""" В первом броске учавствуют 115 несимметричных монет. Отв: 'орлов' """
 def conditional_sv_3():
+    """ В первом броске учавствуют 115 несимметричных монет. Отв: 'орлов' """
     def f():
         n = 56
         p = 0.6
@@ -744,8 +744,8 @@ def conditional_sv_3():
     
     print(inner_code)
 
-""" В первом броске учавствуют 186 несимметричных монет. Отв: мат. ожид. """
 def conditional_sv_4():
+    """ В первом броске учавствуют 186 несимметричных монет. Отв: мат. ожид. """
     def f():
         n = 186
         p = 0.65
@@ -758,8 +758,8 @@ def conditional_sv_4():
     
     print(inner_code)
 
-""" Для случайной цены Y известны вероятности: """
 def conditional_sv_5():
+    """ Для случайной цены Y известны вероятности: """
     def f():
         P_Y = {9: 0.4, 18: 0.6}
         E_XY = sum(y * (6*y)/2 * p for y, p in P_Y.items())
@@ -772,8 +772,8 @@ def conditional_sv_5():
     
     print(inner_code)
 
-""" Игральная кость и 25 монет подбрасываются до тех пор, """
 def conditional_sv_6():
+    """ Игральная кость и 25 монет подбрасываются до тех пор, """
     def f():
         n_coins = 25
         target_heads = 15
@@ -793,8 +793,8 @@ def conditional_sv_6():
     
     print(inner_code)
 
-""" Дано совместное рапределение дискретных случайных велечин X и Y. Отв: E5 = E(E(X|Y)) """
 def conditional_vectors_1():
+    """ Дано совместное рапределение дискретных случайных велечин X и Y. Отв: E5 = E(E(X|Y)) """
     def f():
         joint_prob = {
             (2,6): 0.29,
@@ -818,8 +818,8 @@ def conditional_vectors_1():
     
     print(inner_code)
 
-""" Математическое ожидание доходности акций компаний А и B составляет"""
 def portfolio_analysis_1():
+    """ Математическое ожидание доходности акций компаний А и B составляет """
     def f():
         E_A, E_B = 0.01, 0.02  # Мат. ожидания доходностей
         sigma_A, sigma_B = 0.03, 0.05  # Стандартные отклонения
@@ -835,8 +835,8 @@ def portfolio_analysis_1():
     
     print(inner_code)
 
-""" Инвестор сформировал портфель из акций команий А и B, """
 def portfolio_analysis_2():
+    """ Инвестор сформировал портфель из акций команий А и B, """
     def f():
         w_A = 10 / (10 + 1)  # Доля акций A (10 частей из 11)
         w_B = 1 / (10 + 1)    # Доля акций B (1 часть из 11)
@@ -851,8 +851,8 @@ def portfolio_analysis_2():
     
     print(inner_code)
 
-""" Ожидаемая доходность и стандартное отклонение доходности за период """
 def portfolio_analysis_3():
+    """ Ожидаемая доходность и стандартное отклонение доходности за период """
     def f():
         returns = np.array([0.02, 0.03, 0.04])  # Ожидаемые доходности A, B, C (%)
         volatilities = np.array([0.03, 0.05, 0.06])  # Стандартные отклонения A, B, C (%)
@@ -865,8 +865,8 @@ def portfolio_analysis_3():
     
     print(inner_code)
 
-""" В области ограниченной эллипсом """
 def monte_carlo_1():
+    """ В области ограниченной эллипсом """
     def f():
         def point():
             while True:
@@ -892,8 +892,8 @@ def monte_carlo_1():
     
     print(inner_code)
 
-""" В прямоугольной области """
 def monte_carlo_2():
+    """ В прямоугольной области """
     def f():
         def length(point1, point2):
             return sqrt((point2[0] - point1[0])**2 + (point2[1] - point1[1])**2)
@@ -914,8 +914,8 @@ def monte_carlo_2():
     
     print(inner_code)
 
-""" В кубе объема 3 случайным образом """
 def monte_carlo_3():
+    """ В кубе объема 3 случайным образом """
     def f():
         n_acute = 0
         r_count = 0
