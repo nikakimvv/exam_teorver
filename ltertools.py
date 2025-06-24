@@ -73,6 +73,23 @@ def geometric_probability_1():
     inner_code = inspect.getsource(f)
     print(inner_code)
 
+def geometric_probability_2():
+    """ В круг радиуса 60 наудачу бросаются """
+    def f():
+        N = 10000
+        R = 60
+        r = 20
+        cnt = 0
+        for i in range(N):
+            r1 = sqrt(np.random.uniform(0, R**2))
+            r2 = sqrt(np.random.uniform(0, R**2))
+            if r1 <= r or r2 <= r:
+                cnt += 1
+        pstat = cnt / N
+        round(pstat, 2)
+    inner_code = inspect.getsource(f)
+    print(inner_code)
+
 def independent_events_1():
     """ События A, B и C независимы """
     def f():
@@ -942,3 +959,17 @@ def get_methods():
         'n - это номер шаблона, n=[1, 6]'
     inner_code = inspect.getsource(f)
     print(inner_code)
+
+def find_docs(search_string):
+    """ 
+    Пример: 
+    method = find_docs('независимые пуассоновские')
+    потом method() 
+    если NoneType -> условия нет
+    """
+    current_module = globals()
+    for name, obj in current_module.items():
+        if inspect.isfunction(obj) and obj.__doc__:
+            if search_string.lower() in obj.__doc__.lower():
+                return obj
+    return None
