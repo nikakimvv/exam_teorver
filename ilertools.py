@@ -936,30 +936,6 @@ def monte_carlo_3():
     inner_code = inspect.getsource(f)
     print(inner_code)
 
-def get_methods():
-    def f():
-        'Название методов:'
-        'import_libs() –> Импорт библиотек'
-        'сlassical_probability_n() –> Задание №1'
-        'geometric_probability_n() –> Задание №1'
-        'independent_events_n() –> Задание №1'
-        'formulas_bayes_n() –> Задание №1'
-        'monte_carlo_n() –> Задание №1'
-        'discrete_random_n() –> Задание №2'
-        'independent_dsv_n() –> Задание №2'
-        'independent_discrete_n() –> Задание №2'
-        'special_discrete_n() –> Задание №3'
-        'dependent_dsv_n() –> Задание №3'
-        'portfolio_analysis_n() –> Задание №3'
-        'continuous_random_n() –> Задание №4'
-        'normal_vectors_n() –> Задание №4'
-        'discrete_vectors_n() –> Задание №5'
-        'conditional_sv_n() –> Задание №6'
-        'conditional_vectors_n() –> Задание №6'
-        'n - это номер шаблона, n=[1, 6]'
-    inner_code = inspect.getsource(f)
-    print(inner_code)
-
 def find_docs(search_string):
     """ 
     Пример: 
