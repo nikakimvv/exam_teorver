@@ -30,7 +30,7 @@ def import_libs():
     inner_code = inspect.getsource(f)
     print(inner_code)
 
-def сlassical_probability_1():
+def classical_probability_1():
     """ В группе региональных банков """
     def f():
         def union(A, B):
@@ -45,7 +45,7 @@ def сlassical_probability_1():
     inner_code = inspect.getsource(f)
     print(inner_code)
 
-def сlassical_probability_2():
+def classical_probability_2():
     """ Независимо друг от друга """
     def f():
         w = [str(i) for i in range(1, 12)]
