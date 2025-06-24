@@ -433,7 +433,7 @@ def dependent_dsv_3():
     print(inner_code)
 
 def discrete_vectors_1():
-    """ Дано совместное рапределение дискретных случайных велечин X и Y """
+    """ Дано совместное распределение дискретных случайных велечин X и Y """
     def f():
         X_values = np.array([3, 5, 8])
         Y_values = np.array([9, 10])
@@ -523,7 +523,7 @@ def discrete_vectors_3():
     print(inner_code)
 
 def discrete_vectors_4():
-    """ Дано совместное рапределение дискретных случайных велечин X и Y """
+    """ Дано совместное распределение дискретных случайных велечин X и Y """
     def f():
         X_values = np.array([2, 5, 6])
         Y_values = np.array([10, 11])
@@ -790,7 +790,7 @@ def conditional_sv_6():
     print(inner_code)
 
 def conditional_vectors_1():
-    """ Дано совместное рапределение дискретных случайных велечин X и Y. Отв: E5 = E(E(X|Y)) """
+    """ Дано совместное распределение дискретных случайных велечин X и Y. Отв: E5 = E(E(X|Y)) """
     def f():
         joint_prob = {
             (2,6): 0.29,
